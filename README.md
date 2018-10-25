@@ -1,4 +1,4 @@
-Composer Template
+Home HTML Link
 =========================
 
-Template for easily making composer projects.
+Automatically generate home link o' WordPress website.
