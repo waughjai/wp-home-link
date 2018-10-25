@@ -1,7 +1,7 @@
 {
-    "name": "waughj/home-html-link",
+    "name": "waughj/wp-home-link",
     "description": "Automatically generate home link o' WordPress website.",
-    "keywords": [ "home", "html", "link" ],
+    "keywords": [ "wordpress", "home", "html", "link" ],
     "license": "GPL-2.0-or-later",
     "authors": [
         {
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WaughJ\\HomeHTMLLink\\": "src/"
+            "WaughJ\\WPHomeLink\\": "src/"
         }
     }
 }

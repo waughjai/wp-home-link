@@ -1,12 +1,12 @@
 <?php
 
 declare( strict_types = 1 );
-namespace WaughJ\HomeHTMLLink
+namespace WaughJ\WPHomeLink
 {
 	use WaughJ\HTMLLink\HTMLLink;
 	use function WaughJ\TestHashItem\TestHashItemExists;
 
-	class HomeHTMLLink extends HTMLLink
+	class WPHomeLink extends HTMLLink
 	{
 		public function __construct( array $atts = [] )
 		{
