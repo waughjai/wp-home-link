@@ -17,16 +17,17 @@ class WPHomeLinkTest extends TestCase
 	{
 		$object = new WPHomeLink();
 		$this->assertEquals( $object->getURL(), WP_HOME_URL );
-		$this->assertEquals( $object->getText(), WP_HOME_TEXT );
+		$this->assertEquals( $object->getValue(), WP_HOME_TEXT );
 		$this->assertEquals( $object->getHTML(), '<a href="' . WP_HOME_URL . '">' . WP_HOME_TEXT . '</a>' );
 	}
 
 	public function testCorrectArguments() : void
 	{
-		$object = new WPHomeLink([ 'text' => 'Index', 'class' => 'home-link' ]);
+		$object = new WPHomeLink([ 'value' => 'Index', 'class' => 'home-link' ]);
 		$this->assertEquals( $object->getURL(), WP_HOME_URL );
-		$this->assertEquals( $object->getText(), 'Index' );
+		$this->assertEquals( $object->getValue(), 'Index' );
 		$this->assertEquals( $object->getAttributeValue( 'class' ), 'home-link' );
-		$this->assertEquals( $object->getHTML(), '<a href="' . WP_HOME_URL . '" class="home-link">Index</a>' );
+		$this->assertContains( ' href="' . WP_HOME_URL . '"', $object->getHTML() );
+		$this->assertContains( ' class="home-link"', $object->getHTML() );
 	}
 }
