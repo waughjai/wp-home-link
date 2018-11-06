@@ -11,8 +11,8 @@ namespace WaughJ\WPHomeLink
 		public function __construct( array $atts = [] )
 		{
 			$href = get_home_url();
-			$text = TestHashItemExists( $atts, 'text', get_post( get_option( 'page_on_front' ) )->title );
-			parent::__construct( $href, $text, $atts );
+			$value = TestHashItemExists( $atts, 'value', get_post( get_option( 'page_on_front' ) )->title );
+			parent::__construct( $href, $value, $atts );
 		}
 	}
 }
