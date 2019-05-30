@@ -17,8 +17,8 @@ class WPHomeLinkTest extends TestCase
 	{
 		$object = new WPHomeLink();
 		$this->assertEquals( $object->getURL(), WP_HOME_URL );
-		$this->assertEquals( $object->getValue(), WP_HOME_TEXT );
-		$this->assertEquals( $object->getHTML(), '<a href="' . WP_HOME_URL . '">' . WP_HOME_TEXT . '</a>' );
+		$this->assertEquals( $object->getValue(), "Home" );
+		$this->assertEquals( $object->getHTML(), '<a href="' . WP_HOME_URL . '">Home</a>' );
 	}
 
 	public function testCorrectArguments() : void
@@ -27,7 +27,7 @@ class WPHomeLinkTest extends TestCase
 		$this->assertEquals( $object->getURL(), WP_HOME_URL );
 		$this->assertEquals( $object->getValue(), 'Index' );
 		$this->assertEquals( $object->getAttributeValue( 'class' ), 'home-link' );
-		$this->assertContains( ' href="' . WP_HOME_URL . '"', $object->getHTML() );
-		$this->assertContains( ' class="home-link"', $object->getHTML() );
+		$this->assertStringContainsString( ' href="' . WP_HOME_URL . '"', $object->getHTML() );
+		$this->assertStringContainsString( ' class="home-link"', $object->getHTML() );
 	}
 }
