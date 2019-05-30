@@ -2,7 +2,7 @@
     "name": "waughj/wp-home-link",
     "description": "Automatically generate home link o' WordPress website.",
     "keywords": [ "wordpress", "home", "html", "link" ],
-    "license": "GPL-2.0-or-later",
+    "license": "AGPL-3.0-or-later",
     "authors": [
         {
             "name": "Jaimeson Waugh",
@@ -15,7 +15,7 @@
 		"waughj/html-link": ">=1.2.6"
     },
     "require-dev": {
-		"phpunit/phpunit": "6.*"
+		"phpunit/phpunit": "*"
     },
     "autoload": {
         "psr-4": {
