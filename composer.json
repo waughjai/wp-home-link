@@ -11,8 +11,8 @@
     ],
     "type": "library",
     "require": {
-		"php": ">=7.0",
-		"waughj/html-link": ">=1.2.6"
+		"php": ">=7.2",
+		"waughj/html-link": ">=1.2.7"
     },
     "require-dev": {
 		"phpunit/phpunit": "*"
